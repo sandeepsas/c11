@@ -48,6 +48,27 @@ int main(){
     } else {
         std::cout << "v does not contain: Dog" << '\n';
     }
+	
+    /*Iterate through loop and print values*/
+
+    cout<<"\n Iteration Style - 1" <<endl;
+
+    for(const auto& x:v){
+    	cout<<x<<endl;
+    }
+
+    cout<<"\n Iteration Style - 2" <<endl;
+
+    for_each(v.begin(),v.end(),[](string x){
+    	cout<<x<<endl;
+    });
+
+/*  C++17 Style  
+	cout<<"\n Iteration Style - 3" <<endl;
+
+    for_each(std::execution::seq,v.begin(),v.end(), [] (string str){
+    	cout<<str<<endl;
+    } );*/
 
 
 	return 1;
